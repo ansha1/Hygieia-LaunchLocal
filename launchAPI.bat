@@ -4,7 +4,7 @@ call %~dp0\utils\set_env.bat
 
 cd %HYGIEIA_BASE%\api\target
 
-REM This has generated an application.properties file
+REM This will generate an application.properties file
 
 call %~dp0\utils\generatePropertiesFile.bat
 
