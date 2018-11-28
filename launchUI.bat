@@ -1,5 +1,7 @@
-set /p basefolder=<baseHygieiaFolder.txt
+@echo off
 
-cd %basefolder%\UI
+call %~dp0\utils\set_env.bat
+
+cd %HYGIEIA_BASE%\UI
 
 start gulp serve
