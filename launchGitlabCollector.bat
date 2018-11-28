@@ -1,5 +1,7 @@
 @echo off
 
+set JAVA_DEBUG_PORT=45003
+
 call %~dp0\utils\set_env.bat
 
 cd %HYGIEIA_BASE%\collectors\scm\gitlab\target
