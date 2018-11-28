@@ -12,4 +12,4 @@ REM Get the current name of the jar file
 
 FOR /F "delims=" %%i IN ('"%GIT_BASE%\usr\bin\ls.exe" api*.jar') DO set jarfile=%%i
 
-start java -jar %jarfile% --spring.config.location=application.properties api.jar
+start java %JAVA_DEBUG_OPTS% -jar %jarfile% --spring.config.location=application.properties api.jar

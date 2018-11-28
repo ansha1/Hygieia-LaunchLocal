@@ -17,3 +17,11 @@ IF "%GIT_BASE%"=="" (
 ) ELSE (
 	echo Using GIT_BASE=%GIT_BASE%
 )
+
+if "%HYGIEIA_JAVA_DEBUG_PORT%"=="" (
+	echo Launching java services in production mode
+	set JAVA_DEBUG_OPTS=
+) ELSE (
+	echo Launching java services in debug, listening to port %HYGIEIA_JAVA_DEBUG_PORT%
+	set JAVA_DEBUG_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=%HYGIEIA_JAVA_DEBUG_PORT%
+)
