@@ -11,10 +11,11 @@ Optionally, define the following environment variables in order to alter the scr
 
 * HYGIEIA_BASE: Directory where Hygieia repository has been cloned.  Default: C:\Hygieia
 * GIT_BASE: Installation directory for Git client.  Default: c:\program files\git
-* HYGIEIA\_JAVA\_DEBUG\_PORT: If set, it will launch the java services listening each one into its debug port.  Default: empty (no debug)
+* HYGIEIA\_JAVA\_DEBUG: If set to true, it will launch the java services listening each one into its debug port.  Default: empty (no debug)
 
-If HYGIEIA\_JAVA\_DEBUG\_PORT is set to true, every collector will be launched listening to a certain debug port:
+If HYGIEIA\_JAVA\_DEBUG is set to true, every collector will be launched listening to a certain debug port:
 
 * API: 45001
 * gitlab-ci: 45002
 * gitlab: 45003
+* jenkins: 45004
